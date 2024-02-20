@@ -28,6 +28,8 @@ logBTn.addEventListener('click', async (e) => {
     return
   }
 
-  localStorage.setItem('data', json)
-  location.href = 'vista-admin.html'
+  if (response.ok) {
+    localStorage.setItem('data', json)
+    location.href = 'vista-admin.html'
+  }
 })

@@ -58,3 +58,46 @@ loginBtn.addEventListener('click', async (e) => {
     localStorage.setItem('data', json)
     location.href = 'vista-alumno.html'
 })
+
+const registerBtn = document.getElementById('register-alumno')
+
+registerBtn.addEventListener('click', async (e) => {
+    e.preventDefault()
+    const API_URL = 'http://localhost:3210/alumno'
+
+    const nombres = document.getElementById('r-first-name').value
+    const apellidos = document.getElementById('r-last-name').value
+    const username = document.getElementById('r-username').value
+    const password = document.getElementById('r-password').value
+    const nivel = 1
+    const rol = 2
+
+    const data = {
+        nombres,
+        apellidos,
+        username,
+        password,
+        nivel,
+        rol
+    }
+
+    const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'mode': 'cors'
+        },
+        body: JSON.stringify(data)
+    })
+
+    const json = await response.json()
+
+    if (json.error) {
+        alert(json.error)
+        return
+    }
+
+    if (json.response){
+        alert(json.response)
+    }
+})
