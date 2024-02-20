@@ -18,36 +18,36 @@
             <div class="flex justify-between w-full">
                 <div class="mb-5">
                     <p class="text-sm ">Nombre</p>
-                    <input class="w-72 text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="name" id="name" placeholder="Nombre" required>
+                    <input class="w-72 text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="name" id="r-firstname" placeholder="Nombre" required>
                 </div>
                 <div class="mb-5">
                     <p class="text-sm">Apellidos</p>
-                    <input class="w-72 text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="lastname" id="lastname" placeholder="Apellidos" required>
+                    <input class="w-72 text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="lastname" id="r-lastname" placeholder="Apellidos" required>
                 </div>
             </div>
             <div class="mb-5">
                 <p class="text-sm">Usuario</p>
-                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="user" id="user" placeholder="Usuario" required>
+                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="user" id="r-username" placeholder="Usuario" required>
             </div>
             <div class="mb-5">
                 <p class="text-sm">Contraseña</p>
-                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="password" name="password" id="password" placeholder="Contraseña" required>
+                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="password" name="r-password" id="password" placeholder="Contraseña" required>
             </div>
             <div class="w-full flex justify-center">
-                <input type="submit" value="Registrar" class="hover:cursor-pointer bg-[#3B3355] transition-colors text-white py-2 px-4 rounded-lg hover:bg-slate-800">
+                <input id="register-teacher" type="submit" value="Registrar" class="hover:cursor-pointer bg-[#3B3355] transition-colors text-white py-2 px-4 rounded-lg hover:bg-slate-800">
             </div>
         </form>
         <form class="w-full px-6 hidden transition-all" id="loginForm" action="GET" method="get">
             <div class="mb-5">
                 <p class="text-sm">Usuario</p>
-                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="user" id="user" placeholder="Usuario" required>
+                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="user" id="l-username" placeholder="Usuario" required>
             </div>
             <div class="mb-5">
                 <p class="text-sm">Contraseña</p>
-                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="password" name="password" id="password" placeholder="Contraseña" required>
+                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="password" name="password" id="l-password" placeholder="Contraseña" required>
             </div>
             <div class="w-full flex justify-center">
-                <input type="submit" value="Iniciar sesión" class="hover:cursor-pointer bg-[#3B3355] transition-colors text-white py-2 px-4 rounded-lg hover:bg-slate-800">
+                <input id="login-teacher" type="submit" value="Iniciar sesión" class="hover:cursor-pointer bg-[#3B3355] transition-colors text-white py-2 px-4 rounded-lg hover:bg-slate-800">
             </div>
         </form>
         </div>

@@ -24,3 +24,37 @@ document.getElementById("login").addEventListener("click", function() {
     document.getElementById("login").classList.add("text-white");
     document.getElementById("login").classList.add("bg-[#3B3355]");
 });
+
+const loginBtn = document.getElementById('login-alumno')
+
+loginBtn.addEventListener('click', async (e) => {
+    e.preventDefault()
+    const username = document.getElementById('l-username').value
+    const password = document.getElementById('l-password').value
+
+    const API_URL = 'http://localhost:3210/login/alumno'
+
+    const data = {
+        username,
+        password
+    }
+
+    const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'mode': 'cors'
+        },
+        body: JSON.stringify(data)
+    })
+
+    const json = await response.json()
+
+    if (json.error) {
+        alert(json.error)
+        return
+    }
+
+    localStorage.setItem('data', json)
+    location.href = 'vista-alumno.html'
+})
