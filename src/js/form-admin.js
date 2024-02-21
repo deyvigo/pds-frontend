@@ -29,7 +29,8 @@ logBTn.addEventListener('click', async (e) => {
   }
 
   if (response.ok) {
-    localStorage.setItem('data', json)
-    location.href = 'vista-admin.html'
+    alert('Bienvenido')
+    localStorage.setItem('data', JSON.stringify(json))
+    location.href = 'admin-ciclos.html'
   }
 })
