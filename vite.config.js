@@ -13,7 +13,9 @@ export default defineConfig({
         form_alumno: resolve(__dirname, 'src/pages/form-alumno.html'),
         form_profesor: resolve(__dirname, 'src/pages/form-profesor.html'),
         form_admin: resolve(__dirname, 'src/pages/form-admin.html'),
-        vista_alumno: resolve(__dirname, 'src/pages/vista-alumno.html'),
+        alumno_estadistica: resolve(__dirname, 'src/pages/alumno-estadistica.html'),
+        alumno_matricula: resolve(__dirname, 'src/pages/alumno-matricula.html'),
+        alumno_certificado: resolve(__dirname, 'src/pages/alumno-certificado.html'),
         vista_profesor: resolve(__dirname, 'src/pages/vista-profesor.html'),
         vista_admin: resolve(__dirname, 'src/pages/vista-admin.html')
       }

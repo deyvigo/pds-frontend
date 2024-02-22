@@ -56,7 +56,7 @@ loginBtn.addEventListener('click', async (e) => {
     }
 
     localStorage.setItem('data', json)
-    location.href = 'vista-alumno.html'
+    location.href = 'alumno-estadistica.html'
 })
 
 const registerBtn = document.getElementById('register-alumno')
