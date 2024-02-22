@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
 const getTeachers = async () => {
   const API_URL = 'http://localhost:3210/profesor'
 
-  const token = '' // Del localStorage
+  const token = JSON.parse(localStorage.getItem('data')).token // Esto también de localStorage
   
   const response = await fetch(API_URL,{
     method: 'GET',
@@ -32,7 +32,7 @@ const getTeachers = async () => {
 
   data.forEach(e => {
     let statusColor = e.estado === 'inactivo' ? 'bg-red-500 text-white' : 'bg-green-500 text-black'
-    let leftBottom = e.estado === 'inactivo' ? `<div id="pr_${e.id_profesor}" class="bg-green-300 border-2 border-black rounded-lg py-1 cursor-pointer" onclick="changeStatus(this)">Autorizar</div>` : `<div id="pr_${e.id_profesor}" class="bg-slate-500 border-2 border-black rounded-lg py-1 cursor-pointer" onclick="changeStatus(this)">Desautorizar</div>`
+    let rightBottom = e.estado === 'inactivo' ? `<div id="pr_${e.id_profesor}" class="bg-green-300 border-2 border-black rounded-lg py-1 cursor-pointer" onclick="changeStatus(this)">Autorizar</div>` : `<div id="pr_${e.id_profesor}" class="bg-slate-500 border-2 border-black rounded-lg py-1 cursor-pointer" onclick="changeStatus(this)">Desautorizar</div>`
     table.innerHTML += `
       <div class="flex w-full gap-2 items-center">
         <div class="w-[10%]"></div>
@@ -42,13 +42,13 @@ const getTeachers = async () => {
           <p class="w-[20%]">${e.username}</p>
           <p class="w-[10%] text-center rounded-lg py-1 font-bold ${statusColor}">${e.estado}</p>
         </div>
-        <div class="w-[10%] text-center">${leftBottom}</div>
+        <div class="w-[10%] text-center">${rightBottom}</div>
       </div>
     `
   })
 }
 
-// funcion que se activa cuando se da click en leftBottom (la variable que está más arriba)
+// funcion que se activa cuando se da click en rightBottom (la variable que está más arriba)
 const changeStatus = async (element) => {
   const API_URL = 'http://localhost:3210/profesor/autorizar'
   

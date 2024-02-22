@@ -55,7 +55,7 @@ loginBtn.addEventListener('click', async (e) => {
         return
     }
 
-    localStorage.setItem('data', json)
+    localStorage.setItem('data', JSON.stringify(json))
     location.href = 'vista-profesor.html'
 })
 
