@@ -13,6 +13,8 @@ hide.addEventListener('click', function() {
     headMenu.classList.toggle('justify-between');
     headMenu.classList.toggle('justify-center');
     menuContent.classList.toggle('px-0');
+    menuContent.classList.toggle('px-4');
+
     hide.classList.toggle('rotate-180');
     main.classList.toggle('ml-[50px]');
     main.classList.toggle('ml-[300px]');
