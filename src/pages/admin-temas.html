@@ -78,47 +78,35 @@
         
       </section>
       <section class="w-[100%] h-dvh flex flex-col items-center gap-4 py-4 overflow-y-auto">
-        <h1 class="font-bold text-center text-3xl m-4">Cursos</h1>
-        <div id="tabla-cursos" class="flex flex-col gap-2 items-center justify-center w-[80%]">
-          <div class="flex w-full gap-2 items-center">
-            <div class="flex w-full gap-2 items-center text-center justify-around border-2 border-red-500 rounded-lg h-[50px]">
-              <p class="w-[20%] font-bold text-xl">Código</p>
-              <p class="w-[20%] font-bold text-xl">Curso</p>
-              <p class="w-[20%] font-bold text-xl">Nivel</p>
-              <p class="w-[20%] font-bold text-xl">Requisito</p>
-            </div>
-          </div>
+        <h1 class="font-bold text-center text-3xl m-4">Temas</h1>
+        <div id="tabla-temas" class="flex flex-col gap-2 items-center justify-center w-[80%]">
+          
         </div>
         <div class="border-2 border-black w-[80%] p-4 rounded-xl">
-          <h1 class="indent-3 font-bold">Registrar un curso nuevo</h1>
+          <h1 class="indent-3 font-bold">Registrar un tema nuevo</h1>
           <hr>
           <form class="flex w-full justify-between gap-4 items-center" method="">
-            <div class="flex flex-col w-[22%]">
-              <label class="indent-2" for="ciclo">Codigo</label>
-              <input type="text" placeholder="Código" id="codigo" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none">
+            <div class="flex flex-col w-[25%]">
+              <label class="indent-2" for="ciclo">Nombre</label>
+              <input type="text" placeholder="Código" id="nombre" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none">
             </div>
-            <div class="flex flex-col w-[22%]">
-              <label class="indent-2" for="inicio">Nombre</label>
-              <input type="text" placeholder="Nombre" id="nombre" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg">
+            <div class="flex flex-col w-[25%]">
+              <label class="indent-2" for="inicio">Descripción</label>
+              <input type="text" placeholder="Nombre" id="descripcion" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg">
             </div>
-            <div class="flex flex-col w-[22%]">
-              <label class="indent-2" for="fin">Requisito</label>
-              <select id="requisito" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg">
-                <option class="indent-2 p-2" value="">Ninguno</option>
+            <div class="flex flex-col w-[25%]">
+              <label class="indent-2" for="fin">Curso</label>
+              <select id="curso" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg">
               </select>
             </div>
-            <div class="flex flex-col w-[22%]">
-              <label class="indent-2" for="fin">Nivel</label>
-              <input type="text" placeholder="Nivel" id="nivel" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg">
-            </div>
-            <div class=" w-[10%] flex justify-center">
-              <button id="create-course" class="w-[90%] rounded-lg border-2 border-black">Registrar</button>
+            <div class=" w-[15%] flex justify-center">
+              <button id="create-theme" class="w-[90%] rounded-lg border-2 border-black">Registrar</button>
             </div>
           </form>
         </div>
       </section>
     </div>
-    <script type="module" src="../js/admin-cursos.js"></script>
+    <script type="module" src="../js/admin-temas.js"></script>
     <script src="https://kit.fontawesome.com/6a37e9e6b7.js" crossorigin="anonymous"></script>
 </body>
 </html>
