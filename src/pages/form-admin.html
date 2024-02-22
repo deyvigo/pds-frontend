@@ -10,17 +10,17 @@
         <div class="flex flex-col items-center justify-center shadow-sm py-12 w-[650px] border border-solid rounded-md transition-all">
             <h2 class="font-normal text-xl mb-2">Administrador</h2>
         <h1 class="font-semibold text-3xl mb-3">Iniciar sesión</h1>
-        <form class="w-full px-6 transition-all" id="loginForm" action="GET" method="get">
+        <form class="w-full px-6 transition-all" id="loginForm" method="">
             <div class="mb-5">
                 <p class="text-sm">Usuario</p>
-                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="user" id="user" placeholder="Usuario" required>
+                <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="text" name="user" id="username" placeholder="Usuario" required>
             </div>
             <div class="mb-5">
                 <p class="text-sm">Contraseña</p>
                 <input class="w-full text-base rounded-md py-2 px-4 border-solid border border-black " type="password" name="password" id="password" placeholder="Contraseña" required>
             </div>
             <div class="w-full flex justify-center">
-                <input type="submit" value="Iniciar sesión" class="hover:cursor-pointer bg-[#3B3355] transition-colors text-white py-2 px-4 rounded-lg hover:bg-slate-800">
+                <input id="loginBottom" type="submit" value="Iniciar sesión" class="hover:cursor-pointer bg-[#3B3355] transition-colors text-white py-2 px-4 rounded-lg hover:bg-slate-800">
             </div>
         </form>
         </div>
