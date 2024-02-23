@@ -56,7 +56,7 @@ loginBtn.addEventListener('click', async (e) => {
     }
 
     localStorage.setItem('data', JSON.stringify(json))
-    location.href = 'profesor-asistencia.html'
+    location.href = 'profesor-horarios-asistencia.html'
 })
 
 const registerBtn = document.getElementById('register-teacher')
