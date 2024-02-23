@@ -7,67 +7,59 @@
 </head>
 <body class="min-h-dvh flex items-center justify-center overflow-hidden">
     <div class="w-full h-full flex">
-      <section class="w-[300px] h-dvh">
-        <!-- el menú del administrador -->
+      <section id="div-sidebar" class="fixed transition-all z-10 bg-white flex flex-col items-center content-center h-dvh w-[300px] px-4 shadow-md overflow-hidden ">
+
 
         <div id="sidebar" class="transition-all relative flex flex-col items-center content-center h-dvh w-[300px] px-4 py-3 shadow-md overflow-hidden ">
             <div id="head-menu" class=" flex w-full justify-between items-center mb-10">
-                <img class="w-[70%] h-[60px]" src="./../images/logo-eslider.png" alt="logo_eslider">
+                <img class="w-[70%] h-[60px]" src="./../images/logo-eslider.png" alt="logo_eslider" id="logo">
                 <i id="hide-menu" class=" fas fa-angle-left text-xl cursor-pointer transition-all hover:scale-110 rounded-full px-2 py-1"></i>
             </div>
-            <ul class="flex flex-col gap-6 w-full px-4">
+            <ul id="menu-content" class="flex flex-col gap-6 w-full px-4">
                 <li>
-                    <a href="./admin-ciclos.html" class="px-1 transition-all rounded-md py-1  flex gap-2 items-center border border-transparent hover:border-[#3B3355]">
+                    <a href="./admin-ciclos.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center hover:bg-[#12372A] hover:text-white">
                         <div class="w-[30px] flex justify-center">
-                            <i class="fas fa-home text-xl"></i>
+                            <i class="fas fa-chart-bar text-[17px]  "></i>
                         </div>
                         <p class="font-medium text-lg">Ciclos</p>
                     </a>
                 </li>
                 <li>
-                    <a href="./admin-cursos.html" class="px-1 transition-all rounded-md py-1 flex gap-2 items-center border border-transparent hover:border-[#3B3355]">
+                    <a href="./admin-cursos.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                         <div class="w-[30px] flex justify-center">
-                            <i class="fas fa-user text-xl"></i>
+                            <i class="fas fa-user-plus text-xl text-[17px]"></i>
                         </div>
                         <p class="font-medium text-lg">Cursos</p>
                     </a>
                 </li>
                 <li>
-                  <a href="./admin-temas.html" class="px-1 transition-all rounded-md py-1 flex gap-2 items-center border border-transparent hover:border-[#3B3355]">
-                      <div class="w-[30px] flex justify-center">
-                          <i class="fas fa-user text-xl"></i>
-                      </div>
-                      <p class="font-medium text-lg">Temas</p>
-                  </a>
-                </li>
-                <li>
-                    <a href="./admin-horario.html" class="px-1 transition-all rounded-md py-1 flex gap-2 items-center border border-transparent hover:border-[#3B3355]">
-                        <div class="w-[30px] flex justify-center">
-                            <i class="fas fa-user-plus text-xl"></i>
-                        </div>
-                        <p class="font-medium text-lg">Horarios</p>
-                    </a>
-                    </i>
-                </li>
-                <li>
-                    <a href="./admin-profesores.html" class="px-1 transition-all rounded-md py-1 flex gap-2 items-center border border-transparent hover:border-[#3B3355]">
-                        <div class="w-[30px] flex justify-center">
-                            <i class="fas fa-user-check text-xl"></i>
-                        </div>
-                        <p class="font-medium text-lg">Profesores</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="px-1 transition-all rounded-md py-1 flex gap-2 items-center border border-transparent hover:border-[#3B3355]">
+                    <a href="./admin-temas.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                         <div class="w-[30px] flex justify-center">
                             <i class="fas fa-award text-xl"></i>
                         </div>
-                        <p class="font-medium text-lg">Bans?Tal vez</p>
+                        <p class="font-medium text-lg">Temas</p>
                     </a>
                 </li>
+                <li>
+                  <a href="./admin-horario.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
+                      <div class="w-[30px] flex justify-center">
+                          <i class="fas fa-award text-xl"></i>
+                      </div>
+                      <p class="font-medium text-lg">Horarios</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="./admin-profesores.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
+                      <div class="w-[30px] flex justify-center">
+                          <i class="fas fa-award text-xl"></i>
+                      </div>
+                      <p class="font-medium text-lg">Profesores</p>
+                  </a>
+                </li>
+                
             </ul>
-            <div class="justify-between items-center content-center px-4 py-3 absolute w-full bg-[#3B3355] bottom-0 left-0 flex text-white">
-                <p id="name-admin" class="font-normal">Alumno</p>
+            <div class="justify-between items-center content-center px-4 py-3 absolute w-full bg-[#12372A] bottom-0 left-0 flex text-white">
+                <p id="logout-name" class="font-normal">Alumno</p>
                 <i id="logout" class="fas fa-sign-out-alt text-xl cursor-pointer"></i>
             </div>
         </div>
@@ -76,8 +68,14 @@
 
 
         
-      </section>
-      <section class="w-[100%] h-dvh flex flex-col items-center gap-4 py-4 overflow-y-auto">
+
+
+
+
+    </section>
+
+
+      <section id="main" class="transition-all ease-in-out duration-100 w-[100%] h-dvh flex flex-col ml-[300px] items-center gap-4 py-4 overflow-y-auto">
         <h1 class="font-bold text-center text-3xl m-4">Cursos</h1>
         <div id="tabla-cursos" class="flex flex-col gap-2 items-center justify-center w-[80%]">
           <div class="flex w-full gap-2 items-center">
@@ -118,6 +116,7 @@
         </div>
       </section>
     </div>
+    <script type="module" src="./../js/menu.js"></script>
     <script type="module" src="../js/admin-cursos.js"></script>
     <script src="https://kit.fontawesome.com/6a37e9e6b7.js" crossorigin="anonymous"></script>
 </body>

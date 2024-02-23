@@ -12,7 +12,7 @@ hide.addEventListener('click', function() {
     menu.classList.toggle('px-2');
     headMenu.classList.toggle('justify-between');
     headMenu.classList.toggle('justify-center');
-    menuContent.classList.toggle('px-0');
+    menuContent.classList.toggle('px-4');
     hide.classList.toggle('rotate-180');
     main.classList.toggle('ml-[50px]');
     main.classList.toggle('ml-[300px]');
@@ -30,5 +30,9 @@ const btn = document.getElementById('logout')
 btn.addEventListener('click', () => {
     console.log('Sesion Cerrada')
     localStorage.clear()
-    location.href = 'index.html'
+    location.href = '/'
 })
+
+const logName = document.getElementById('logout-name')
+
+logName.innerHTML = JSON.parse(localStorage.getItem('data')).nombres

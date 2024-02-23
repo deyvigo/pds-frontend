@@ -3,11 +3,8 @@ import './../css/style.css'
 window.addEventListener('load', async () => {
   const data = JSON.parse(localStorage.getItem('data'))
   if (!data) {
-    location.href = 'index.html'
+    location.href = '/'
   }
-  // Pone el nombre en el sidebar
-  const name = document.getElementById('name-admin')
-  name.innerText = data.nombres
 
   showCourses()
 })

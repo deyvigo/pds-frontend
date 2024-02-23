@@ -56,7 +56,7 @@ loginBtn.addEventListener('click', async (e) => {
     }
 
     localStorage.setItem('data', JSON.stringify(json))
-    location.href = 'vista-profesor.html'
+    location.href = 'profesor-asistencia.html'
 })
 
 const registerBtn = document.getElementById('register-teacher')

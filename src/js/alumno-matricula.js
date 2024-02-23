@@ -3,11 +3,8 @@ import './../css/style.css';
 window.addEventListener('load', async () => {
   const data = JSON.parse(localStorage.getItem('data'))
   if (!data) {
-    location.href = 'index.html'
+    location.href = '/'
   }
-  // Pone el nombre en el sidebar
-  const name = document.getElementById('logout-name')
-  name.innerText = data.nombres
 
   await getHorarios()
 
@@ -71,8 +68,6 @@ const getHorarios = async () => {
 
   const json = await response.json()
   const horContainer = document.getElementById('matricula-container')
-
-  console.log(json.response === 'Ya estás matriculado')
 
   if (json.response === 'Ya estás matriculado') {
     const element = `
@@ -148,5 +143,6 @@ const matricula = async () => {
     }
 
     alert('Matricula exitosa')
+    location.reload()
   })
 }
