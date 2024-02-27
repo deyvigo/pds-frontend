@@ -27,6 +27,11 @@ const setCourses = async () => {
     }
   })
 
+  if (response.status === 404) {
+    horariosContainer.innerHTML = '<h1 class="font-bold" >No hay horarios registrados</h1>'
+    return
+  }
+
   if (!response.ok) {
     alert('Error al obtener los horarios')
     return

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="overflow-hidden">
+    <div class="h-dvh flex w-full">
+        <section id="div-sidebar" class="fixed transition-all z-10 bg-white flex flex-col items-center content-center h-dvh w-[300px] shadow-md overflow-hidden ">
+
+
+            <div id="sidebar" class="transition-all relative flex flex-col items-center content-center h-dvh w-[300px] px-4 py-3 shadow-md overflow-hidden ">
+                <div id="head-menu" class=" flex w-full justify-between items-center mb-10">
+                    <img class="w-[70%] h-[60px]" src="./../images/logo-eslider.png" alt="logo_eslider" id="logo">
+                    <i id="hide-menu" class=" fas fa-angle-left text-xl cursor-pointer transition-all hover:scale-110 rounded-full px-2 py-1"></i>
+                </div>
+                <ul id="menu-content" class="flex flex-col gap-6 w-full px-4">
+                    <li>
+                        <a href="./profesor-horarios-asistencia.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center hover:bg-[#12372A] hover:text-white">
+                            <div class="w-[30px] flex justify-center">
+                                <i class="fas fa-chart-bar text-[17px]  "></i>
+                            </div>
+                            <p class="font-medium text-lg">Asistencia</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./profesor-cursos-notas.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
+                            <div class="w-[30px] flex justify-center">
+                                <i class="fas fa-user-plus text-xl text-[17px]"></i>
+                            </div>
+                            <p class="font-medium text-lg">Notas</p>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+                <div class="justify-between items-center content-center px-4 py-3 absolute w-full bg-[#12372A] bottom-0 left-0 flex text-white">
+                    <p id="logout-name" class="font-normal">Profesor</p>
+                    <i id="logout" class="fas fa-sign-out-alt text-xl cursor-pointer"></i>
+                </div>
+            </div>
+
+
+
+
+            
+
+
+
+
+        </section>
+
+
+
+
+        <section id="main" class="min-h-dvh pb-6 w-[100%] px-16 pt-10 ml-[300px] transition-all">
+            <div class="flex mb-8 gap-2">
+                <h1 class="text-4xl font-medium">Calificaciones</h1>
+            </div>
+            <div class="w-full flex flex-col gap-2">
+                <section id="temas-container" class="w-[80%] flex flex-col gap-2 items-start"> 
+                  <div class="w-full flex h-[40px] justify-between px-2 border-2 border-[#12372A] rounded-lg">
+                    <div class="w-[90%] flex items-center">
+                      <h1 class="indent-2 font-bold">Temas</h1>
+                    </div>
+                    <div class="w-[10%] flex items-center font-bold">
+                    </div>
+                  </div>
+                  <hr>
+                  
+
+
+
+                </section>
+                
+            </div>
+            
+        </section>
+
+
+
+    </div>
+</body>
+<script type="module" src="./../js/profesor-notas.js"></script>
+<script type="module" src="./../js/menu.js"></script>
+<script src="https://kit.fontawesome.com/6a37e9e6b7.js" crossorigin="anonymous"></script>
+</html>
