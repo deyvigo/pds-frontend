@@ -79,9 +79,9 @@ const showHorarios = async () => {
               <div class="flex items-center w-[15%] justify-center">
                 <div class="w-1/2 flex items-center justify-center">
                   <select class="required w-[90%]" name="" id="estado">
-                    <option value="${h.id_horario + '_' + newEstados[0]}">${newEstados[0]}</option>
-                    <option value="${h.id_horario + '_' + newEstados[1]}">${newEstados[1]}</option>
-                    <option value="${h.id_horario + '_' + newEstados[2]}">${newEstados[2]}</option>
+                    <option value="${h.id_horario + '_' + newEstados[0] + '_' + h.id_ciclo}">${newEstados[0]}</option>
+                    <option value="${h.id_horario + '_' + newEstados[1] + '_' + h.id_ciclo}">${newEstados[1]}</option>
+                    <option value="${h.id_horario + '_' + newEstados[2] + '_' + h.id_ciclo}">${newEstados[2]}</option>
                   </select>
                 </div>
                 <div class="w-1/2 flex items-center justify-center">
@@ -122,14 +122,16 @@ const dropAnimation = () => {
 const changeStatus = async (e) => {
   const select = e.parentElement.parentElement.children[0].children[0].value  // xd
   const idHorario = select.split('_').shift()
-  const estado = select.split('_').pop()
+  const estado = select.split('_')[1]
+  const idCiclo = select.split('_').pop()
 
   const API_URL = 'http://localhost:3210/horario'
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const data = {
     idHorario,
-    estado
+    estado,
+    idCiclo
   }
 
   console.log(data)
