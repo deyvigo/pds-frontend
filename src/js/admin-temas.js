@@ -36,17 +36,17 @@ const showThemes = async () => {
   json.curso.forEach(c => {
     let component = `
       <div class="flex flex-col w-full gap-2 items-center">
-        <div class="drop-bottom cursor-pointer border-2 rounded-lg border-black w-full h-[50px] flex items-center">
-          <h1 class="indent-4 font-bold text-xl">${c.nombre}</h1>
+        <div class="drop-bottom cursor-pointer border-2 rounded-lg bg-[#436850] w-full h-[50px] flex items-center">
+          <h1 class=" text-white indent-4 font-bold text-xl">${c.nombre}</h1>
         </div>
         <div class="drop-box sr-only transition-all duration-200 ease-in-out flex flex-col w-[80%] gap-2 items-center justify-around">
     `
 
     c.temas.forEach(t => {
       component += `
-        <div class="w-full flex items-center h-[50px] border-2 border-sky-300 rounded-lg">
-          <p class="w-[30%] font-bold indent-4">${t.nombre}</p>
-          <p class="w-[70%] font-bold indent-4">${t.descripcion}</p>
+        <div class="w-full flex items-center h-[50px] border-t">
+          <p class="w-[30%] font-semibold indent-4">${t.nombre}</p>
+          <p class="w-[70%] font-normal indent-4">${t.descripcion}</p>
         </div>
       `
     })

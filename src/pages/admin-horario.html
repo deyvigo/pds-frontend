@@ -19,7 +19,7 @@
                     <li>
                         <a href="./admin-ciclos.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center hover:bg-[#12372A] hover:text-white">
                             <div class="w-[30px] flex justify-center">
-                                <i class="fas fa-chart-bar text-[17px]  "></i>
+                                <i class="fas fa-calendar-alt text-[17px]"></i>
                             </div>
                             <p class="font-medium text-lg">Ciclos</p>
                         </a>
@@ -27,7 +27,7 @@
                     <li>
                         <a href="./admin-cursos.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                             <div class="w-[30px] flex justify-center">
-                                <i class="fas fa-user-plus text-xl text-[17px]"></i>
+                                <i class="fas fa-book text-[17px]"></i>
                             </div>
                             <p class="font-medium text-lg">Cursos</p>
                         </a>
@@ -35,7 +35,7 @@
                     <li>
                         <a href="./admin-temas.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                             <div class="w-[30px] flex justify-center">
-                                <i class="fas fa-award text-xl"></i>
+                                <i class="fas fa-clipboard text-xl"></i>
                             </div>
                             <p class="font-medium text-lg">Temas</p>
                         </a>
@@ -43,7 +43,7 @@
                     <li>
                       <a href="./admin-horario.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                           <div class="w-[30px] flex justify-center">
-                              <i class="fas fa-award text-xl"></i>
+                              <i class="fas fa-clock text-xl"></i>
                           </div>
                           <p class="font-medium text-lg">Horarios</p>
                       </a>
@@ -51,7 +51,7 @@
                     <li>
                       <a href="./admin-profesores.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                           <div class="w-[30px] flex justify-center">
-                              <i class="fas fa-award text-xl"></i>
+                              <i class="fas fa-chalkboard-teacher text-[17px]"></i>
                           </div>
                           <p class="font-medium text-lg">Profesores</p>
                       </a>
@@ -83,14 +83,14 @@
 
 
         </div>
-        <div class="border-2 border-black w-[40%] p-4 rounded-xl">
-          <h1 class="indent-3 font-bold">Registrar un horario nuevo</h1>
+        <div class="bg-[#12372A] w-[40%] p-4 rounded-xl text-white">
+          <h1 class="font-medium text-2xl mb-2">Registrar un horario nuevo</h1>
           <hr>
-          <form class="flex flex-col w-full justify-between gap-4 items-center" method="">
+          <form class="my-4 flex flex-col w-full justify-between gap-4 items-center" method="">
             <div class="flex w-full">
                 <div class="w-1/2 flex flex-col">
-                    <label class="indent-2" for="dia">Dia</label>
-                    <select type="text" placeholder="lunes" id="dia" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none">
+                    <label class="" for="dia">Día</label>
+                    <select type="text" placeholder="lunes" id="dia" class="outline-none text-black required indent-2 flex h-10 w-[90%] rounded-md border border-input bg-background px-3 py-2 text-sm">
                         <option value="lunes">Lunes</option>
                         <option value="martes">Martes</option>
                         <option value="miércoles">Miercoles</option>
@@ -102,31 +102,31 @@
                 </div>
                 <div class="w-1/2 flex flex-col">
                     <label class="indent-2" for="ciclo">Ciclo</label>
-                    <select placeholder="" id="ciclo" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none"></select>
+                    <select placeholder="" id="ciclo" class="outline-none text-black required indent-2 flex h-10 w-[90%] rounded-md border border-input bg-background px-3 py-2 text-sm"></select>
                 </div>
             </div>
             <div class="flex w-full">
                 <div class="w-1/2 flex flex-col">
                     <label class="indent-2" for="hora-inicio">Hora Inicio</label>
-                    <input type="time" placeholder="" id="hora-inicio" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none">
+                    <input type="time" placeholder="" id="hora-inicio" class="outline-none text-black required indent-2 flex h-10 w-[90%] rounded-md border border-input bg-background px-3 py-2 text-sm">
                 </div>
                 <div class="w-1/2 flex flex-col">
                     <label class="indent-2" for="hora-final">Hora Final</label>
-                    <input type="time" placeholder="" id="hora-final" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none">
+                    <input type="time" placeholder="" id="hora-final" class="outline-none text-black required indent-2 flex h-10 w-[90%] rounded-md border border-input bg-background px-3 py-2 text-sm">
                 </div>
             </div>
             <div class="flex w-full">
                 <div class="w-1/2 flex flex-col">
                     <label class="indent-2" for="profesor">Profesor</label>
-                    <select placeholder="" id="profesor" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none"></select>
+                    <select placeholder="" id="profesor" class="outline-none text-black required indent-2 flex h-10 w-[90%] rounded-md border border-input bg-background px-3 py-2 text-sm"></select>
                 </div>
                 <div class="w-1/2 flex flex-col">
                     <label class="indent-2" for="curso">Curso</label>
-                    <select placeholder="" id="curso" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none"></select>
+                    <select placeholder="" id="curso" class="outline-none text-black required indent-2 flex h-10 w-[90%] rounded-md border border-input bg-background px-3 py-2 text-sm"></select>
                 </div>
             </div>
-            <div class=" w-[50%] flex justify-center">
-              <button id="create-horario" class="w-[90%] rounded-lg border-2 border-black py-1">Registrar</button>
+            <div class=" w-[50%] flex justify-center mt-4">
+              <button id="create-horario" class="font-semibold h-10 w-[90%] rounded-lg border-2 border-white">Registrar</button>
             </div>
           </form>
         </div>

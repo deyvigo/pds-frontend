@@ -19,7 +19,7 @@
                 <li>
                     <a href="./admin-ciclos.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center hover:bg-[#12372A] hover:text-white">
                         <div class="w-[30px] flex justify-center">
-                            <i class="fas fa-chart-bar text-[17px]  "></i>
+                            <i class="fas fa-calendar-alt text-[17px]"></i>
                         </div>
                         <p class="font-medium text-lg">Ciclos</p>
                     </a>
@@ -27,7 +27,7 @@
                 <li>
                     <a href="./admin-cursos.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                         <div class="w-[30px] flex justify-center">
-                            <i class="fas fa-user-plus text-xl text-[17px]"></i>
+                            <i class="fas fa-book text-[17px]"></i>
                         </div>
                         <p class="font-medium text-lg">Cursos</p>
                     </a>
@@ -35,7 +35,7 @@
                 <li>
                     <a href="./admin-temas.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                         <div class="w-[30px] flex justify-center">
-                            <i class="fas fa-award text-xl"></i>
+                            <i class="fas fa-clipboard text-xl"></i>
                         </div>
                         <p class="font-medium text-lg">Temas</p>
                     </a>
@@ -43,7 +43,7 @@
                 <li>
                   <a href="./admin-horario.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                       <div class="w-[30px] flex justify-center">
-                          <i class="fas fa-award text-xl"></i>
+                          <i class="fas fa-clock text-xl"></i>
                       </div>
                       <p class="font-medium text-lg">Horarios</p>
                   </a>
@@ -51,7 +51,7 @@
                 <li>
                   <a href="./admin-profesores.html" class="px-1 transition-all rounded-md py-2 flex gap-2 items-center  hover:bg-[#12372A] hover:text-white">
                       <div class="w-[30px] flex justify-center">
-                          <i class="fas fa-award text-xl"></i>
+                          <i class="fas fa-chalkboard-teacher text-[17px]"></i>
                       </div>
                       <p class="font-medium text-lg">Profesores</p>
                   </a>
@@ -77,40 +77,40 @@
 
       <section id="main" class="transition-all ease-in-out duration-100 w-[100%] h-dvh flex flex-col ml-[300px] items-center gap-4 py-4 overflow-y-auto">
         <h1 class="font-bold text-center text-3xl m-4">Cursos</h1>
-        <div id="tabla-cursos" class="flex flex-col gap-2 items-center justify-center w-[80%]">
+        <div id="tabla-cursos" class="flex flex-col mt-8 items-center justify-center w-[80%] mb-10">
           <div class="flex w-full gap-2 items-center">
-            <div class="flex w-full gap-2 items-center text-center justify-around border-2 border-red-500 rounded-lg h-[50px]">
-              <p class="w-[20%] font-bold text-xl">Código</p>
-              <p class="w-[20%] font-bold text-xl">Curso</p>
-              <p class="w-[20%] font-bold text-xl">Nivel</p>
-              <p class="w-[20%] font-bold text-xl">Requisito</p>
+            <div class="flex w-full gap-2 items-center text-center justify-around h-[50px] hover:bg-gray-50 transition-colors">
+              <p class="w-[20%] font-medium text-xl">Código</p>
+              <p class="w-[20%] font-medium text-xl">Curso</p>
+              <p class="w-[20%] font-medium text-xl">Nivel</p>
+              <p class="w-[20%] font-medium text-xl">Requisito</p>
             </div>
           </div>
         </div>
-        <div class="border-2 border-black w-[80%] p-4 rounded-xl">
-          <h1 class="indent-3 font-bold">Registrar un curso nuevo</h1>
+        <div class="bg-[#12372A] w-[80%] px-4 py-8 rounded-xl text-white">
+          <h1 class="font-medium text-2xl mb-2">Registrar un curso nuevo</h1>
           <hr>
-          <form class="flex w-full justify-between gap-4 items-center" method="">
+          <form class="mt-4 flex w-full justify-between gap-4 items-end" method="">
             <div class="flex flex-col w-[22%]">
-              <label class="indent-2" for="ciclo">Codigo</label>
-              <input type="text" placeholder="Código" id="codigo" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg outline-none">
+              <label class="mb-1" for="ciclo">Código</label>
+              <input type="text" placeholder="Código" id="codigo" class="outline-none text-black required indent-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm">
             </div>
             <div class="flex flex-col w-[22%]">
-              <label class="indent-2" for="inicio">Nombre</label>
-              <input type="text" placeholder="Nombre" id="nombre" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg">
+              <label class="mb-1" for="inicio">Nombre</label>
+              <input type="text" placeholder="Nombre" id="nombre" class="outline-none text-black required indent-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm">
             </div>
             <div class="flex flex-col w-[22%]">
-              <label class="indent-2" for="fin">Requisito</label>
-              <select id="requisito" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg">
+              <label class="mb-1" for="fin">Requisito</label>
+              <select id="requisito" class="outline-none text-black required indent-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm">
                 <option class="indent-2 p-2" value="">Ninguno</option>
               </select>
             </div>
             <div class="flex flex-col w-[22%]">
-              <label class="indent-2" for="fin">Nivel</label>
-              <input type="text" placeholder="Nivel" id="nivel" class="required indent-2 w-[90%] h-[30px] border-2 border-black rounded-lg">
+              <label class="mb-1" for="fin">Nivel</label>
+              <input type="text" placeholder="Nivel" id="nivel" class="outline-none text-black required indent-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm">
             </div>
             <div class=" w-[10%] flex justify-center">
-              <button id="create-course" class="w-[90%] rounded-lg border-2 border-black">Registrar</button>
+              <button id="create-course" class="font-semibold h-10 w-[90%] rounded-lg border-2 border-white">Registrar</button>
             </div>
           </form>
         </div>

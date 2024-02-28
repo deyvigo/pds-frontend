@@ -28,16 +28,16 @@ const getTeachers = async () => {
   const table = document.querySelector('#tabla-profesores')
 
   data.forEach(e => {
-    let statusColor = e.estado === 'inactivo' ? 'bg-red-500 text-white' : 'bg-green-500 text-black'
-    let rightBottom = e.estado === 'inactivo' ? `<div id="pr_${e.id_profesor}" class="bg-green-300 border-2 border-black rounded-lg py-1 cursor-pointer" onclick="changeStatus(this)">Autorizar</div>` : `<div id="pr_${e.id_profesor}" class="bg-slate-500 border-2 border-black rounded-lg py-1 cursor-pointer" onclick="changeStatus(this)">Desautorizar</div>`
+    let statusColor = e.estado === 'inactivo' ? 'bg-red-600 text-white' : 'bg-green-600 text-black'
+    let rightBottom = e.estado === 'inactivo' ? `<div id="pr_${e.id_profesor}" class="bg-gray-100 rounded-md py-1 cursor-pointer" onclick="changeStatus(this)">Autorizar</div>` : `<div id="pr_${e.id_profesor}" class="bg-gray-100 rounded-md py-1 cursor-pointer" onclick="changeStatus(this)">Desautorizar</div>`
     table.innerHTML += `
       <div class="flex w-full gap-2 items-center">
         <div class="w-[10%]"></div>
-        <div class="flex w-[80%] gap-2 items-center justify-around border-2 border-sky-500 rounded-lg h-[50px]">
+        <div class="hover:bg-gray-50 transition-colors flex w-[80%] gap-2 items-center justify-around border-t h-[50px]">
           <p class="w-[20%]">${e.nombres}</p>
           <p class="w-[20%]">${e.apellidos}</p>
           <p class="w-[20%]">${e.username}</p>
-          <p class="w-[10%] text-center rounded-lg py-1 font-bold ${statusColor}">${e.estado}</p>
+          <p class="w-[10%] text-center rounded-md py-1 font-bold ${statusColor}">${e.estado}</p>
         </div>
         <div class="w-[10%] text-center">${rightBottom}</div>
       </div>
