@@ -37,13 +37,13 @@ const showHorarios = async () => {
   json.cursos.forEach(c => {
     let element = `
       <div class="flex flex-col w-full gap-2 items-center">
-        <div class="drop-bottom cursor-pointer border-2 rounded-lg border-black w-full h-[50px] flex items-center">
-          <h1 class="indent-4 font-bold text-xl">${c.nombre}</h1>
+        <div class="drop-bottom cursor-pointer bg-[#436850] rounded-lg  w-full h-[50px] flex items-center">
+          <h1 class="text-white indent-4 font-bold text-xl">${c.nombre}</h1>
         </div>
-        <div class="drop-box sr-only transition-all duration-200 ease-in-out flex flex-col w-[95%] gap-2 items-center justify-around">
+        <div class="drop-box sr-only transition-all duration-200 ease-in-out flex flex-col w-[95%] items-center justify-around">
           <div class="w-full flex">
 
-            <div class="w-[85%] flex items-center h-[50px] border-2 border-sky-300 rounded-lg">
+            <div class="w-[85%] flex items-center h-[50px] hover:bg-gray-100 transition-colors">
               <p class="w-[20%] font-bold indent-4">Dia Semana</p>
               <p class="w-[20%] font-bold indent-4">Hora Inicio</p>
               <p class="w-[20%] font-bold indent-4">Hora Final</p>
@@ -55,7 +55,7 @@ const showHorarios = async () => {
                 <p class="text-center font-bold">Cambiar Estado</p>
               </div>
               <div class="w-1/2 flex items-center justify-center">
-                <button class="sr-only border-2 border-green-600 rounded-md p-1">Enviar</button>
+                <button class="sr-only border-2 border-green-600  rounded-md p-1 font-semibold">Enviar</button>
               </div>
             </div>
 
@@ -69,12 +69,12 @@ const showHorarios = async () => {
       let newEstados = estados.filter(e => e !== h.estado)
       element += `
             <div class="w-full flex">
-              <div class="w-[85%] flex items-center h-[50px] border-2 border-sky-300 rounded-lg">
-                <p class="w-[20%] font-bold indent-4">${h.dia_semana}</p>
-                <p class="w-[20%] font-bold indent-4">${h.hora_inicio}</p>
-                <p class="w-[20%] font-bold indent-4">${h.hora_final}</p>
-                <p class="w-[20%] font-bold indent-4">${h.profesor[0].nombres}</p>
-                <p class="w-[20%] font-bold indent-4">${h.estado}</p>
+              <div class="w-[85%] flex items-center h-[50px] border-t hover:bg-gray-100 transition-colors">
+                <p class="w-[20%] font-normal indent-4">${h.dia_semana}</p>
+                <p class="w-[20%] font-normal indent-4">${h.hora_inicio}</p>
+                <p class="w-[20%] font-normal indent-4">${h.hora_final}</p>
+                <p class="w-[20%] font-normal indent-4">${h.profesor[0].nombres}</p>
+                <p class="w-[20%] font-normal indent-4">${h.estado}</p>
               </div>
               <div class="flex items-center w-[15%] justify-center">
                 <div class="w-1/2 flex items-center justify-center">
@@ -85,7 +85,7 @@ const showHorarios = async () => {
                   </select>
                 </div>
                 <div class="w-1/2 flex items-center justify-center">
-                  <button onclick="changeStatus(this)" class="border-2 border-green-600 rounded-md p-1">Enviar</button>
+                  <button onclick="changeStatus(this)" class="font-semibold border-2 border-green-600 rounded-md p-1">Enviar</button>
                 </div>
               </div>
           

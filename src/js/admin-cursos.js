@@ -34,12 +34,12 @@ const showCourses = async () => {
 
   json.curso.forEach(c => {
     tabla.innerHTML += `
-      <div class="flex w-full gap-2 items-center">
-        <div class="flex w-full gap-2 items-center text-center justify-around border-2 border-sky-500 rounded-lg h-[50px]">
-          <p class="w-[20%] font-bold">${c.codigo_curso}</p>
-          <p class="w-[20%] font-bold">${c.nombre}</p>
-          <p class="w-[20%] font-bold">${c.nivel}</p>
-          <p class="w-[20%] font-bold">${c.requisito??'No Requisito'}</p>
+      <div class="flex w-full gap-2 items-center hover:bg-gray-50 transition-colors">
+        <div class="flex w-full gap-2 items-center text-center justify-around border-t h-[50px]">
+          <p class="w-[20%] font-semibold">${c.codigo_curso}</p>
+          <p class="w-[20%] font-normal">${c.nombre}</p>
+          <p class="w-[20%] font-normal">${c.nivel}</p>
+          <p class="w-[20%] font-normal">${c.requisito??'No Requisito'}</p>
         </div>
       </div>
     `

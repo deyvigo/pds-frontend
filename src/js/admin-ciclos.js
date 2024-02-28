@@ -34,11 +34,11 @@ const showCicles = async () => {
 
   json.forEach(c => {
     table.innerHTML += `
-      <div class="flex w-full gap-2 items-center">
-        <div class="flex w-full gap-2 items-center text-center justify-around border-2 border-sky-500 rounded-lg h-[50px]">
-          <p class="w-[30%] font-bold">${c.ciclo}</p>
-          <p class="w-[30%] font-bold">${c.inicio.split('T').shift()}</p>
-          <p class="w-[30%] font-bold">${c.fin.split('T').shift()}</p>
+      <div class="flex w-full gap-2 items-center hover:bg-gray-50 transition-colors">
+        <div class="flex w-full gap-2 items-center text-center justify-around border-t h-[50px]">
+          <p class="w-[30%] font-semibold">${c.ciclo}</p>
+          <p class="w-[30%] font-normal">${c.inicio.split('T').shift()}</p>
+          <p class="w-[30%] font-normal">${c.fin.split('T').shift()}</p>
         </div>
       </div>
     `
