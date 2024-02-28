@@ -16,7 +16,7 @@ const setCourses = async () => {
   const token = JSON.parse(localStorage.getItem('data')).token
   const idProfesor = JSON.parse(localStorage.getItem('data')).id
 
-  const API_URL = `http://localhost:3210/horario/profesor/${idProfesor}`
+  const API_URL = `https://pds-backend-gdj3.onrender.com/horario/profesor/${idProfesor}`
 
   const response = await fetch(API_URL,  {
     method: 'GET',

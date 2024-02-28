@@ -14,7 +14,7 @@ window.addEventListener('load', async () => {
 
 
 const showThemes = async (idProfesor) => {
-  const API_URL = `http://localhost:3210/curso/${idProfesor}`
+  const API_URL = `https://pds-backend-gdj3.onrender.com/curso/${idProfesor}`
   const token = JSON.parse(localStorage.getItem('data')).token
   const response = await fetch(API_URL, {
     method: 'GET',

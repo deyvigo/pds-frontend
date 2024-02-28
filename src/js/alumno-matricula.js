@@ -55,7 +55,7 @@ const getHorarios = async () => {
   const nivel = JSON.parse(localStorage.getItem('data')).nivel
   const token = JSON.parse(localStorage.getItem('data')).token
   
-  const API_URL = `http://localhost:3210/horario/nivel/${nivel}/${idAlumno}`
+  const API_URL = `https://pds-backend-gdj3.onrender.com/horario/nivel/${nivel}/${idAlumno}`
 
   const response = await fetch(API_URL, {
     method: 'GET',
@@ -117,7 +117,8 @@ const matricula = async () => {
   btnMatricula.addEventListener('click', async (e) => {
     e.preventDefault()
 
-    const API_URL = 'http://localhost:3210/matricula'
+    const API_URL = 'https://pds-backend-gdj3.onrender.com/matricula'
+    
     const token = JSON.parse(localStorage.getItem('data')).token
     const idAlumno = JSON.parse(localStorage.getItem('data')).id
     const checkedHorarios = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(c => c.id.split('_').pop())

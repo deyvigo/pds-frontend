@@ -10,7 +10,7 @@ window.addEventListener('load', async () => {
 })
 
 const showCourses = async () => {
-  const API_URL = 'http://localhost:3210/curso'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/curso'
 
   const token = JSON.parse(localStorage.getItem('data')).token
 
@@ -63,7 +63,7 @@ const createBtn = document.getElementById('create-course')
 createBtn.addEventListener('click', async (e) => {
   e.preventDefault()
   
-  const API_URL = 'http://localhost:3210/curso'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/curso'
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const codigo = document.getElementById('codigo').value

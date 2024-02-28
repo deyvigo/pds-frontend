@@ -32,7 +32,7 @@ loginBtn.addEventListener('click', async (e) => {
     const username = document.getElementById('l-username').value
     const password = document.getElementById('l-password').value
 
-    const API_URL = 'http://localhost:3210/login/alumno'
+    const API_URL = 'https://pds-backend-gdj3.onrender.com/login/alumno'
 
     const data = {
         username,
@@ -63,7 +63,7 @@ const registerBtn = document.getElementById('register-alumno')
 
 registerBtn.addEventListener('click', async (e) => {
     e.preventDefault()
-    const API_URL = 'http://localhost:3210/alumno'
+    const API_URL = 'https://pds-backend-gdj3.onrender.com/alumno'
 
     const nombres = document.getElementById('r-first-name').value
     const apellidos = document.getElementById('r-last-name').value

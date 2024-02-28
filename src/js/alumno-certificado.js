@@ -14,7 +14,7 @@ const fetchCourses = async () => {
   const idAlumno = JSON.parse(localStorage.getItem('data')).id
   const token = JSON.parse(localStorage.getItem('data')).token
 
-  const API_URL = `http://localhost:3210/fichanota/alumno/${idAlumno}`
+  const API_URL = `https://pds-backend-gdj3.onrender.com/fichanota/alumno/${idAlumno}`
 
   const response = await fetch(API_URL, {
     method: 'GET',
@@ -88,7 +88,7 @@ const sendToCertificate = async () => {
 
       console.log(data)
       
-      const API_URL = 'http://localhost:3210/certificado'
+      const API_URL = 'https://pds-backend-gdj3.onrender.com/certificado'
 
       await fetch(API_URL, {
         method: 'POST',
@@ -115,10 +115,6 @@ const sendToCertificate = async () => {
         `
         )
       })
-
-
-
-
     })
   })
 }
