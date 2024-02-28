@@ -12,7 +12,7 @@ window.addEventListener('load', async () => {
 })
 
 const showThemes = async () => {
-  const API_URL = 'http://localhost:3210/tema'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/tema'
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const response = await fetch(API_URL, {
@@ -93,7 +93,7 @@ const createBtn = document.getElementById('create-theme')
 createBtn.addEventListener('click', async (e) => {
   e.preventDefault()
   
-  const API_URL = 'http://localhost:3210/tema'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/tema'
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const nombre = document.getElementById('nombre').value

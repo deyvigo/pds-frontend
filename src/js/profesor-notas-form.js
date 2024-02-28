@@ -16,7 +16,7 @@ window.addEventListener('load', async () => {
 
 const setAlumns = async (idCurso, idProfesor, tema) => {
 
-  const API_URL = `http://localhost:3210/alumno/curso/${idCurso}/${idProfesor}`
+  const API_URL = `https://pds-backend-gdj3.onrender.com/alumno/curso/${idCurso}/${idProfesor}`
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const response = await fetch(API_URL, {
@@ -91,7 +91,7 @@ const sendNotes = async (tema, idProfesor) => {
       }))
     }
 
-    const API_URL = 'http://localhost:3210/fichanota'
+    const API_URL = 'https://pds-backend-gdj3.onrender.com/fichanota'
 
     const token = JSON.parse(localStorage.getItem('data')).token
 

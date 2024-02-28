@@ -15,7 +15,9 @@ window.addEventListener('load', async () => {
 })
 
 const showThemes = async (idCurso, idProfesor) => {
-  const API_URL = `http://localhost:3210/tema/curso/${idCurso}/${idProfesor}`
+
+  const API_URL = `https://pds-backend-gdj3.onrender.com/tema/curso/${idCurso}/${idProfesor}`
+  
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const table = document.getElementById('temas-container')

@@ -16,7 +16,7 @@ const setAlumns = async (idHorario) => {
 
   const token = JSON.parse(localStorage.getItem('data')).token
 
-  const API_URL = `http://localhost:3210/horario/alumno/${idHorario}`
+  const API_URL = `https://pds-backend-gdj3.onrender.com/horario/alumno/${idHorario}`
 
   const response = await fetch(API_URL, {
     method: 'GET',
@@ -80,7 +80,8 @@ const sendAsistencia = async () => {
     const fecha = `${fechaActual.getFullYear()}-${fechaActual.getMonth() + 1}-${fechaActual.getDate()}`
 
     const token = JSON.parse(localStorage.getItem('data')).token
-    const API_URL = 'http://localhost:3210/asistencia'
+    
+    const API_URL = 'https://pds-backend-gdj3.onrender.com/asistencia'
 
     const data = {
       data: values.map((a, index) => ({

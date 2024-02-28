@@ -13,7 +13,7 @@ window.addEventListener('load', async () => {
 
 
 const showHorarios = async () => {
-  const API_URL = 'http://localhost:3210/horario'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/horario'
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const response = await fetch(API_URL, {
@@ -125,7 +125,7 @@ const changeStatus = async (e) => {
   const estado = select.split('_')[1]
   const idCiclo = select.split('_').pop()
 
-  const API_URL = 'http://localhost:3210/horario'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/horario'
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const data = {
@@ -162,9 +162,9 @@ const setOptions = async () => {
   
   const token = JSON.parse(localStorage.getItem('data')).token
 
-  const API_URL_CICLO = 'http://localhost:3210/ciclo'
-  const API_URL_CURSO = 'http://localhost:3210/curso'
-  const API_URL_PROFESOR = 'http://localhost:3210/profesor/activos'
+  const API_URL_CICLO = 'https://pds-backend-gdj3.onrender.com/ciclo'
+  const API_URL_CURSO = 'https://pds-backend-gdj3.onrender.com/curso'
+  const API_URL_PROFESOR = 'https://pds-backend-gdj3.onrender.com/profesor/activos'
 
   const responseCiclo = await fetch(API_URL_CICLO, {
     method: 'GET',
@@ -222,7 +222,7 @@ createBtn.addEventListener('click', async (e) => {
   const horaInicio = document.getElementById('hora-inicio').value
   const horaFinal = document.getElementById('hora-final').value
 
-  const API_URL = 'http://localhost:3210/horario'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/horario'
   const token = JSON.parse(localStorage.getItem('data')).token
 
   const data = {

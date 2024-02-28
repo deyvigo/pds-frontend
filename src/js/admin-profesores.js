@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
 })
 
 const getTeachers = async () => {
-  const API_URL = 'http://localhost:3210/profesor'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/profesor'
 
   const token = JSON.parse(localStorage.getItem('data')).token // Esto también de localStorage
   
@@ -47,7 +47,7 @@ const getTeachers = async () => {
 
 // funcion que se activa cuando se da click en rightBottom (la variable que está más arriba)
 const changeStatus = async (element) => {
-  const API_URL = 'http://localhost:3210/profesor/autorizar'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/profesor/autorizar'
   
   const idProfesor = element.id.split('_').pop()
   const estado = element.innerText === 'Autorizar' ? 'activo' : 'inactivo'

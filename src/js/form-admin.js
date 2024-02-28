@@ -7,7 +7,7 @@ logBTn.addEventListener('click', async (e) => {
   const username = document.getElementById('username').value
   const password = document.getElementById('password').value
 
-  const API_URL = 'http://localhost:3210/login/administrador'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/login/administrador'
   const data = {
     username,
     password

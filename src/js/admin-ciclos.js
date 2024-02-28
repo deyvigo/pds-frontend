@@ -10,7 +10,7 @@ window.addEventListener('load', async () => {
 })
 
 const showCicles = async () => {
-  const API_URL = 'http://localhost:3210/ciclo'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/ciclo'
 
   const token = JSON.parse(localStorage.getItem('data')).token
 
@@ -49,7 +49,7 @@ const createBtn = document.getElementById('create-cicle')
 
 createBtn.addEventListener('click', async (e) => {
   e.preventDefault()
-  const API_URL = 'http://localhost:3210/ciclo'
+  const API_URL = 'https://pds-backend-gdj3.onrender.com/ciclo'
 
   const token = JSON.parse(localStorage.getItem('data')).token
 
