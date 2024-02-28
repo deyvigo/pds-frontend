@@ -77,6 +77,13 @@ const getHorarios = async () => {
     return
   }
 
+  if (json.horarios.length === 0) {
+    const element = `
+      <div class="w-full indent-4 font-bold">No hay horarios disponibles</div>
+    `
+    horContainer.innerHTML += element
+    return
+  }
 
   json.horarios.forEach(h => {
     const element = `
