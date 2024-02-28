@@ -63,6 +63,8 @@ const registerBtn = document.getElementById('register-teacher')
 
 registerBtn.addEventListener('click', async (e) => {
     e.preventDefault()
+
+    registerBtn.disabled = true
     
     const API_URL = 'https://pds-backend-gdj3.onrender.com/profesor'
 
@@ -101,4 +103,6 @@ registerBtn.addEventListener('click', async (e) => {
     if (json.response){
         alert(json.response)
     }
+
+    registerBtn.disabled = false
 })

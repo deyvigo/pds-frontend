@@ -44,9 +44,9 @@ const showThemes = async () => {
 
     c.temas.forEach(t => {
       component += `
-        <div class="w-full flex items-center h-[50px] border-t">
+        <div class="w-full flex items-center h-[50px] border-t gap-2">
           <p class="w-[30%] font-semibold indent-4">${t.nombre}</p>
-          <p class="w-[70%] font-normal indent-4">${t.descripcion}</p>
+          <p class="w-[70%] font-normal indent-4 truncate hover:text-clip">${t.descripcion}</p>
         </div>
       `
     })
@@ -92,6 +92,8 @@ const createBtn = document.getElementById('create-theme')
 
 createBtn.addEventListener('click', async (e) => {
   e.preventDefault()
+
+  createBtn.disabled = true // para evitar doble click
   
   const API_URL = 'https://pds-backend-gdj3.onrender.com/tema'
   const token = JSON.parse(localStorage.getItem('data')).token
@@ -125,4 +127,6 @@ createBtn.addEventListener('click', async (e) => {
     alert('Tema Creado')
     location.reload()
   }
+
+  createBtn.disabled = false
 })

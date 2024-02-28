@@ -75,6 +75,8 @@ const sendNotes = async (tema, idProfesor) => {
   btn.addEventListener('click', async (e) => {
     e.preventDefault()
 
+    btn.disabled = true
+
     const alumnos = Array.from(form.querySelectorAll('section'))
     const data = {
       data: alumnos.map(a => ({
@@ -112,5 +114,7 @@ const sendNotes = async (tema, idProfesor) => {
 
     alert('Notas enviadas correctamente')
     location.href = './profesor-cursos-notas.html'
+
+    btn.disabled = false
   })
 }

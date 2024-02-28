@@ -49,6 +49,9 @@ const createBtn = document.getElementById('create-cicle')
 
 createBtn.addEventListener('click', async (e) => {
   e.preventDefault()
+
+  createBtn.disabled = true
+
   const API_URL = 'https://pds-backend-gdj3.onrender.com/ciclo'
 
   const token = JSON.parse(localStorage.getItem('data')).token
@@ -82,4 +85,6 @@ createBtn.addEventListener('click', async (e) => {
     alert('Ciclo creado')
     location.reload()
   }
+
+  createBtn.disabled = false
 })

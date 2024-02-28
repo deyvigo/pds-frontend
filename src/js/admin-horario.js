@@ -215,6 +215,8 @@ const createBtn = document.getElementById('create-horario')
 createBtn.addEventListener('click', async (e) => {
   e.preventDefault()
 
+  createBtn.disabled = true
+
   const ciclo = document.getElementById('ciclo').value
   const idCurso = document.getElementById('curso').value
   const idProfesor = document.getElementById('profesor').value
@@ -254,6 +256,8 @@ createBtn.addEventListener('click', async (e) => {
 
   alert('Se creo el horario')
   location.reload()
+
+  createBtn.disabled = false
 })
 
 window.changeStatus = changeStatus

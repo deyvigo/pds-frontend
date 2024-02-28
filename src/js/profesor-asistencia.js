@@ -72,6 +72,8 @@ const sendAsistencia = async () => {
   btnAsistencia.addEventListener('click', async (e) => {
     e.preventDefault()
 
+    btnAsistencia.disabled = true
+
     const values = Array.from(formAsistencia.querySelectorAll('input:checked')).map(i => i.value)
     const idHorarios = Array.from(formAsistencia.querySelectorAll('input:checked')).map(i => i.name.split('_').pop())
     const idAlumnos = Array.from(formAsistencia.querySelectorAll('input:checked')).map(i => i.name.split('_').shift())
@@ -112,5 +114,7 @@ const sendAsistencia = async () => {
 
     alert('Asistencia enviada')
     location.href = 'profesor-horarios-asistencia.html'
+
+    btnAsistencia.disabled = false
   })
 }

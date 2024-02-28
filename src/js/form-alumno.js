@@ -63,6 +63,9 @@ const registerBtn = document.getElementById('register-alumno')
 
 registerBtn.addEventListener('click', async (e) => {
     e.preventDefault()
+
+    registerBtn.disabled = true
+
     const API_URL = 'https://pds-backend-gdj3.onrender.com/alumno'
 
     const nombres = document.getElementById('r-first-name').value
@@ -100,4 +103,6 @@ registerBtn.addEventListener('click', async (e) => {
     if (json.response){
         alert(json.response)
     }
+
+    registerBtn.disabled = false
 })
