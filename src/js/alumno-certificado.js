@@ -55,7 +55,7 @@ const setCoursesAproved = async () => {
           <p class="indent-4 font-semibold text-[#DBE7C9]">Fecha Inicio: <span>${fechaInicio.split('T')[0]}</span></p>
           <p class="indent-4 font-semibold text-[#DBE7C9]">Fecha Fin: <span>${fechaFinal.split('T')[0]}</span></p>
           <div class="w-full flex justify-end px-4">
-            <button id="${a.id_curso}" class="certificate-btn hover:scale-[1.02] transition-all ease-in-out border-2 border-[#DBE7C9] rounded-md px-2 text-white">Generar certificado</button>
+            <button id="${a.id_curso + '_' + a.id_ciclo}" class="certificate-btn hover:scale-[1.02] transition-all ease-in-out border-2 border-[#DBE7C9] rounded-md px-2 text-white">Generar certificado</button>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@ const sendToCertificate = async () => {
   const btn = document.querySelectorAll('.certificate-btn')
   btn.forEach(b => {
     b.addEventListener('click', async () => {
-      const curso = json.find(c => c.id_curso === parseInt(b.id))
+      const curso = json.find(c => c.id_curso === parseInt(b.id.split('_')[0]) && c.id_ciclo === parseInt(b.id.split('_')[1]))
       const fechaInicio = curso.fecha_inicio 
       const fechaFinal = curso.fecha_final
       
