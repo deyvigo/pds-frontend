@@ -29,7 +29,7 @@ const getCourses = async () => {
   })
 
   if (response.status === 404) {
-    alert('No tienes cursos finalizados')
+    
     return
   }
 
@@ -56,7 +56,7 @@ const getCourses = async () => {
           <p class="">Nivel: ${c.nivel}</p>
           <p class="">Profesor: ${c.profesor}</p>
           <p class="">Ciclo: ${c.ciclo}</p>
-          <p class="font-semibold">Promedio: <span class="${colorPromedio}">${c.promedio}</span></p>
+          <p class="font-semibold">Promedio: <span class="${colorPromedio}">${Math.round(c.promedio)}</span></p>
         </div>
         <i class="desc-box fas fa-info-circle absolute cursor-pointer bottom-0 right-0 px-4 py-3 bg-[#12372A] text-white rounded-br-lg rounded-tl-lg hover:bg-[#1d4436] " id="curso-info"></i>
 

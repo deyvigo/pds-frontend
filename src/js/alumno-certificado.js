@@ -33,7 +33,7 @@ const setCoursesAproved = async () => {
   const response = await fetchCourses()
 
   if (response.status === 404) {
-    alert('No tienes cursos finalizados')
+
     return
   }
 
@@ -50,7 +50,7 @@ const setCoursesAproved = async () => {
       <div class="w-full border-2 border-black rounded-xl bg-[#12372A]">
         <div class="w-full p-2">
           <h1 class="indent-2 text-xl font-bold text-white">${a.curso}</h1>
-          <p class="indent-4 font-semibold text-[#DBE7C9]">Promedio: <span>${a.promedio}</span></p>
+          <p class="indent-4 font-semibold text-[#DBE7C9]">Promedio: <span>${Math.round(a.promedio)}</span></p>
           <p class="indent-4 font-semibold text-[#DBE7C9]">Ciclo: <span>${a.ciclo}</span></p>
           <p class="indent-4 font-semibold text-[#DBE7C9]">Fecha Inicio: <span>${fechaInicio.split('T')[0]}</span></p>
           <p class="indent-4 font-semibold text-[#DBE7C9]">Fecha Fin: <span>${fechaFinal.split('T')[0]}</span></p>
